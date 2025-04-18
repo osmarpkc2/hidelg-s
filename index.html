@@ -2,50 +2,65 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="manifest" href="manifest.json" />
-  <!-- Favicon padrão -->
-  <link rel="icon" href="logohidel.ico" type="image/png" sizes="32x32">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <title>Hidelgás - Gás e Água Mineral</title>
   <link rel="stylesheet" href="style.css">
-  
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="logohidel.ico" type="image/png" sizes="32x32">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <header>
-    <div class="logo-container">
-      <img src="logohidel.png" alt="Logo da Hidelgás" class="logo">
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="logohidel.png" alt="Logo da Hidelgás" class="logo">
+      </div>
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="#gas">Gás</a></li>
+          <li><a href="#agua">Água</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="#mapa">Mapa</a></li>
+        </ul>
+      </nav>
     </div>
-    <h1>Hidelgás.</h1>
-    <p>Entrega rápida de Gás e Água Mineral!</p>
+    <h1 class="header-title">Entrega rápida de Gás e Água Mineral!</h1>
+    <div class="theme-toggle" id="theme-toggle">
+      <i class="fas fa-moon"></i> <!-- Ícone para modo escuro -->
+    </div>
   </header>
 
   <main class="container">
-    <section class="gas-section">
+    <!-- Seção Gás -->
+    <section id="gas" class="gas-section">
       <h2><i class="fas fa-fire"></i> Gás</h2>
       <ul>
         <li>Botijão de Gás</li>
       </ul>
-      <a href="https://wa.me/5588981073510?text=Olá!%20Gostaria%20de%20comprar%20um%20botijão%20de%20gás." class="btn-whatsapp" target="_blank" title="Fale conosco no WhatsApp">
+      <a href="https://wa.me/5588981073510?text=Olá!%20Gostaria%20de%20comprar%20um%20botijão%20de%20gás." class="btn-whatsapp" target="_blank">
         <i class="fab fa-whatsapp"></i> Comprar Gás
       </a>
     </section>
 
-    <section class="agua-section">
+    <!-- Seção Água -->
+    <section id="agua" class="agua-section">
       <h2><i class="fas fa-tint"></i> Água</h2>
       <ul>
         <li>Galão de Água Mineral 20L (Serra Grande)</li>
       </ul>
-      <a href="https://wa.me/5588981073510?text=Olá!%20Gostaria%20de%20comprar%20um%20galão%20de%20água%20mineral%2020L." class="btn-whatsapp" target="_blank" title="Fale conosco no WhatsApp">
+      <a href="https://wa.me/5588981073510?text=Olá!%20Gostaria%20de%20comprar%20um%20galão%20de%20água%20mineral%2020L." class="btn-whatsapp" target="_blank">
         <i class="fab fa-whatsapp"></i> Comprar Água
       </a>
     </section>
 
-    <section class="info">
+    <!-- Seção Contato -->
+    <section id="contato" class="info">
       <h2><i class="fas fa-map-marker-alt"></i> Contato</h2>
-      <p><strong>Endereço:</strong> R. Maj. Felinto, 204 - Várzea, Carnaubal - CE, 62375-000</p>
+      <p><strong>Endereço:</strong> R. Maj. Felinto, 201 - Várzea, Carnaubal - CE, 62375-000</p>
       <p><strong>WhatsApp:</strong> (88) 98107-3510</p>
 
       <h2><i class="fas fa-clock"></i> Horário de Funcionamento</h2>
@@ -54,75 +69,35 @@
         <li><strong>Domingo:</strong> 08:00 às 12:00</li>
       </ul>
 
+      <!-- Calculadora -->
       <section class="calculadora">
         <h2><i class="fas fa-calculator"></i> Calculadora de Consumo de Gás</h2>
         <form id="calculadora-gas">
           <label for="num-pessoas">Número de pessoas:</label>
           <input type="number" id="num-pessoas" required>
-      
+
           <label for="uso-diario">Uso diário (em horas):</label>
           <input type="number" id="uso-diario" required>
-      
+
           <button type="submit">Calcular Consumo</button>
         </form>
-      
+
         <p id="resultado"></p>
       </section>
 
-      <h2><i class="fas fa-map"></i> Como Chegar</h2>
+      <!-- Mapa -->
+      <h2 id="mapa"><i class="fas fa-map"></i> Como Chegar</h2>
       <div class="mapa">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d457.8629545041151!2d-40.946282417303244!3d-4.16571202148345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x794ecc51c85aeef%3A0x23a9232d8c466f9c!2sR.%20Maj.%20Felinto%2C%20204%20-%20V%C3%A1rzea%2C%20Carnaubal%20-%20CE%2C%2062375-000!5e0!3m2!1spt-BR!2sbr!4v1744939468311!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d457.8629545041151!2d-40.946282417303244!3d-4.16571202148345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x794ecc51c85aeef%3A0x23a9232d8c466f9c!2sR.%20Maj.%20Felinto%2C%20204%20-%20V%C3%A1rzea%2C%20Carnaubal%20-%20CE%2C%2062375-000!5e0!3m2!1spt-BR!2sbr!4v1713430413164!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
   </main>
 
   <footer>
-    © 2025 Hidelgás - Todos os direitos reservados  
-    <br>
-    <img src="logosuper.png" alt="Supergasbras" class="logo-secundaria">
+    <p>&copy; 2025 Hidelgás - Todos os direitos reservados.</p>
+    <img src="/logosuper.png" alt="Logo Secundária" class="logo-secundaria">
   </footer>
 
-  <script>
-    // Função para calcular o consumo de gás
-    document.getElementById("calculadora-gas").addEventListener("submit", function(e) {
-        e.preventDefault();
-      
-        const numPessoas = parseInt(document.getElementById("num-pessoas").value);
-        const usoDiario = parseInt(document.getElementById("uso-diario").value);
-      
-        // Cálculo do consumo mensal
-        const consumoMensal = numPessoas * usoDiario * 30; 
-      
-        // Exibe o resultado
-        document.getElementById("resultado").textContent = `Consumo estimado: ${consumoMensal} horas de uso por mês.`;
-    });
-  
-    // Função para carregar o mapa de Google Maps
-    function initMap() {
-        const hidelgasLocation = { lat: -4.165712, lng: -40.946282 }; // Localização da Hidelgás
-        
-        const mapOptions = {
-            center: hidelgasLocation,
-            zoom: 12, // Zoom inicial para ver o local
-        };
-        
-        const map = new google.maps.Map(document.getElementById("map"), mapOptions);
-    
-        // Adiciona um marcador na localização da Hidelgás
-        const marker = new google.maps.Marker({
-            position: hidelgasLocation,
-            map: map,
-            title: "Hidelgás - Localização",
-        });
-    }
-  
-    // Carregar o mapa assim que a página carregar
-    window.onload = function() {
-        initMap();
-    };
-  </script>
-
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
-  
+  <script src="script.js"></script>
 </body>
 </html>
