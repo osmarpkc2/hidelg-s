@@ -1,0 +1,119 @@
+:root {
+    --laranja: #f97316;
+    --vermelho: #dc2626;
+    --azul: #2563eb;
+    --branco: #ffffff;
+    --cinza: #f5f5f5;
+    --cinza-texto: #333;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--branco);
+    color: var(--cinza-texto);
+    line-height: 1.6;
+  }
+  
+  header {
+    background: linear-gradient(to right, var(--azul), var(--vermelho));
+    color: var(--branco);
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  .container {
+    padding: 2rem 1rem;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  section:hover {
+    transform: scale(1.02);
+  }
+  
+  .gas-section {
+    background: #fff4f2;
+    border-left: 6px solid var(--vermelho);
+  }
+  
+  .agua-section {
+    background: #eef6ff;
+    border-left: 6px solid var(--azul);
+  }
+  
+  .gas-section h2 {
+    color: var(--vermelho);
+  }
+  
+  .agua-section h2 {
+    color: var(--azul);
+  }
+  
+  .info h2 {
+    margin-top: 1rem;
+    color: var(--laranja);
+  }
+  
+  ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+  }
+  
+  footer {
+    background-color: var(--laranja);
+    color: var(--branco);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Botão WhatsApp fixo */
+  .btn-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    font-size: 28px;
+    text-decoration: none;
+    padding: 14px 18px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-whatsapp:hover {
+    background-color: #1ebe5d;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 600px) {
+    .container {
+      padding: 1rem;
+    }
+  
+    header h1 {
+      font-size: 1.8rem;
+    }
+  
+    .btn-whatsapp {
+      font-size: 24px;
+      padding: 12px 16px;
+    }
+  }
+  
