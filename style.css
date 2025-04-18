@@ -1,19 +1,21 @@
 /* Estilo geral para modo escuro */
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #121212; /* Fundo escuro */
-    color: #e0e0e0; /* Texto claro */
+    background-color: #121212;
+    color: #e0e0e0;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.5;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   header {
-    background: linear-gradient(45deg, #ff6f00, #d32f2f); /* Degradê laranja e vermelho */
+    background: linear-gradient(45deg, #ff6f00, #d32f2f);
     color: white;
     text-align: center;
-    padding: 15px 0; /* Ajustei o padding para não ficar tão grande */
+    padding: 10px 0; /* Ajustado para não ficar grande */
   }
 
   header .logo-container {
@@ -24,16 +26,16 @@
   }
 
   header .logo {
-    max-width: 80px; /* Logo menor no celular */
+    max-width: 80px;
   }
 
   header h1 {
-    font-size: 24px; /* Tamanho reduzido para título */
+    font-size: 24px;
     margin: 10px 0;
   }
 
   header p {
-    font-size: 14px; /* Tamanho reduzido para subtítulo */
+    font-size: 14px;
   }
 
   .container {
@@ -61,12 +63,12 @@
   }
 
   h2 {
-    font-size: 20px; /* Cabeçalhos menores no celular */
+    font-size: 20px;
     margin-bottom: 10px;
   }
 
   ul li {
-    font-size: 16px; /* Texto de lista ajustado */
+    font-size: 16px;
   }
 
   .btn-whatsapp {
@@ -79,7 +81,7 @@
     font-weight: bold;
     margin-top: 15px;
     text-align: center;
-    width: 100%; /* Botão ocupando toda a largura */
+    width: 100%;
     box-sizing: border-box;
     transition: all 0.3s ease-in-out;
   }
@@ -112,10 +114,11 @@
   }
 
   footer img {
-    max-width: 120px; /* Logo do footer menor no celular */
+    max-width: 120px;
     margin-top: 10px;
   }
 
+  /* Ajustes para mapa */
   .mapa {
     position: relative;
     padding-bottom: 56.25%;
@@ -134,7 +137,7 @@
     filter: brightness(0.8);
   }
 
-  /* Ajustes para calcular o layout no celular */
+  /* Ajustes na calculadora */
   .calculadora {
     background-color: #333;
     padding: 15px;
@@ -194,19 +197,18 @@
   }
 }
 
-/* Garantindo um bom comportamento no Samsung Internet */
-@supports (-webkit-touch-callout: none) {
-  /* Aumenta o contraste do botão */
-  .btn-whatsapp {
-    background-color: #25D366 !important;
-    color: white !important;
-    padding: 12px 25px;
-    font-size: 16px;
-    transition: all 0.3s ease-in-out;
+/* Melhorias para telas maiores (tablet e desktop) */
+@media (min-width: 768px) {
+  .gas-section, .agua-section {
+    padding: 20px;
   }
 
-  .btn-whatsapp:hover {
-    background-color: #ff7f32 !important;
-    transform: scale(1.1);
+  .btn-whatsapp {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+
+  .calculadora {
+    padding: 20px;
   }
 }
