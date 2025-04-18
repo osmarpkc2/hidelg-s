@@ -6,13 +6,14 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.5;
   }
 
   header {
     background: linear-gradient(45deg, #ff6f00, #d32f2f); /* Degradê laranja e vermelho */
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 15px 0; /* Ajustei o padding para não ficar tão grande */
   }
 
   header .logo-container {
@@ -38,6 +39,8 @@
   .container {
     padding: 10px;
     background-color: #1e1e1e;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .gas-section, .agua-section {
@@ -45,6 +48,8 @@
     margin-bottom: 20px;
     border-radius: 8px;
     color: white;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .gas-section {
@@ -74,7 +79,7 @@
     font-weight: bold;
     margin-top: 15px;
     text-align: center;
-    width: 100%; /* Tornar o botão full width */
+    width: 100%; /* Botão ocupando toda a largura */
     box-sizing: border-box;
     transition: all 0.3s ease-in-out;
   }
@@ -186,5 +191,22 @@
     .footer img {
       max-width: 100px;
     }
+  }
+}
+
+/* Garantindo um bom comportamento no Samsung Internet */
+@supports (-webkit-touch-callout: none) {
+  /* Aumenta o contraste do botão */
+  .btn-whatsapp {
+    background-color: #25D366 !important;
+    color: white !important;
+    padding: 12px 25px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .btn-whatsapp:hover {
+    background-color: #ff7f32 !important;
+    transform: scale(1.1);
   }
 }
