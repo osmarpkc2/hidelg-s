@@ -1,232 +1,207 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background: linear-gradient(45deg, #ff6f00, #d32f2f); /* Degradê de laranja e vermelho */
-  color: white;
-  text-align: center;
-  padding: 40px 0;
-}
-
-header .logo-container {
-  background-color: white; /* Fundo branco atrás da logo */
-  display: inline-block;
-  padding: 10px;
-  border-radius: 50%;
-}
-
-header .logo {
-  max-width: 100px;
-}
-
-header h1 {
-  font-size: 36px;
-  margin: 0;
-}
-
-header p {
-  font-size: 18px;
-}
-
-.container {
-  padding: 20px;
-}
-
-.gas-section, .agua-section {
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-}
-
-.gas-section {
-  background-color: #ff6f00; /* Laranja */
-  color: white;
-}
-
-.agua-section {
-  background-color: #007bff; /* Azul */
-  color: white;
-}
-
-h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-ul li {
-  font-size: 18px;
-  margin-bottom: 5px;
-}
-
-.btn-whatsapp {
-  display: inline-block;
-  background-color: #25D366; /* Verde do WhatsApp */
-  color: white;
-  padding: 10px 20px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 15px;
-}
-
-.info {
-  margin-top: 20px;
-  background-color: #f4f4f4;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.info h2 {
-  color: #d32f2f; /* Vermelho para cabeçalhos da seção de contato */
-}
-
-.info p, .info ul {
-  font-size: 18px;
-  color: #333;
-}
-
-footer {
-  text-align: center;
-  background-color: #333;
-  color: white;
-  padding: 10px;
-}
-
-footer img {
-  max-width: 150px;
-  margin-top: 10px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 28px;
+/* Definindo cores para o modo escuro */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212; /* Cor de fundo escura */
+    color: #e0e0e0; /* Cor do texto clara */
   }
 
-  header p {
-    font-size: 16px;
+  header {
+    background: linear-gradient(45deg, #ff6f00, #d32f2f); /* Degradê de laranja e vermelho */
+    color: white;
+  }
+
+  header .logo-container {
+    background-color: white;
+  }
+
+  header h1, header p {
+    color: white;
   }
 
   .container {
+    padding: 20px;
+  }
+
+  .gas-section, .agua-section {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+
+  .gas-section {
+    background-color: #ff6f00; /* Laranja */
+    color: white;
+  }
+
+  .agua-section {
+    background-color: #007bff; /* Azul */
+    color: white;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff; /* Texto dos cabeçalhos em branco */
+  }
+
+  ul li {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .btn-whatsapp {
+    background-color: #25D366; /* Verde do WhatsApp */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+
+  .info {
+    margin-top: 20px;
+    background-color: #2c2c2c; /* Cor de fundo escura para a seção de informações */
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .info h2 {
+    color: #d32f2f; /* Vermelho para cabeçalhos da seção de contato */
+  }
+
+  .info p, .info ul {
+    font-size: 18px;
+    color: #ddd; /* Texto em tom claro */
+  }
+
+  footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
     padding: 10px;
   }
 
-  .gas-section, .agua-section {
-    padding: 15px;
+  footer img {
+    max-width: 150px;
+    margin-top: 10px;
   }
 
-  .gas-section h2, .agua-section h2 {
-    font-size: 22px;
-  }
-
-  .btn-whatsapp {
-    padding: 8px 16px;
-    font-size: 16px;
-  }
-
-  .info {
-    padding: 15px;
-  }
-
-  .info h2 {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .gas-section, .agua-section {
-    padding: 12px;
-  }
-
-  .gas-section h2, .agua-section h2 {
-    font-size: 20px;
-  }
-
-  .btn-whatsapp {
-    padding: 6px 12px;
-    font-size: 14px;
-  }
-
-  .info {
-    padding: 12px;
-  }
-
-  .info h2 {
-    font-size: 18px;
-  }
-}
-.mapa {
-  position: relative;
-  padding-bottom: 56.25%; /* Proporção 16:9 */
-  height: 0;
-  overflow: hidden;
-  max-width: 100%; /* Garantir que ocupe toda a largura possível */
-  margin: 0 auto; /* Centralizar o mapa */
-}
-
-.mapa {
-  position: relative;
-  padding-bottom: 56.25%; /* Proporção 16:9 */
-  height: 0;
-  overflow: hidden;
-  max-width: 100%; /* Garantir que ocupe toda a largura possível */
-  margin: 0 auto; /* Centralizar o mapa */
-}
-
-.mapa iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-@media (min-width: 768px) {
+  /* Modificando o mapa para o modo escuro */
   .mapa {
-    width: 80%; /* Limitar a largura no desktop */
-    max-width: 900px; /* Largura máxima no desktop */
-    padding-bottom: 40%; /* Reduzir a altura do mapa no desktop */
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .mapa iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.8); /* Ajustando a luminosidade do mapa para o modo escuro */
+  }
+
+  /* Estilo para a calculadora */
+  .calculadora {
+    background-color: #333; /* Fundo escuro para a calculadora */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+
+  .calculadora input, .calculadora button {
+    background-color: #444; /* Fundo escuro para inputs e botões */
+    color: #fff; /* Texto claro */
+  }
+
+  .calculadora input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #555; /* Borda mais clara */
+  }
+
+  .calculadora button {
+    background-color: #ff7f32; /* Laranja para o botão */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* Efeito de animação para os botões no modo escuro */
+  .btn-whatsapp {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .btn-whatsapp:hover {
+    transform: scale(1.1); /* Aumenta o botão em 10% ao passar o mouse */
+    background-color: #ff7f32; /* Muda a cor para um tom laranja mais forte */
+  }
+
+  /* Responsividade */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 28px;
+    }
+
+    header p {
+      font-size: 16px;
+    }
+
+    .container {
+      padding: 10px;
+    }
+
+    .gas-section, .agua-section {
+      padding: 15px;
+    }
+
+    .gas-section h2, .agua-section h2 {
+      font-size: 22px;
+    }
+
+    .btn-whatsapp {
+      padding: 8px 16px;
+      font-size: 16px;
+    }
+
+    .info {
+      padding: 15px;
+    }
+
+    .info h2 {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .gas-section, .agua-section {
+      padding: 12px;
+    }
+
+    .gas-section h2, .agua-section h2 {
+      font-size: 20px;
+    }
+
+    .btn-whatsapp {
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+
+    .info {
+      padding: 12px;
+    }
+
+    .info h2 {
+      font-size: 18px;
+    }
   }
 }
-/* Efeito de animação para os botões */
-.btn-whatsapp {
-  transition: all 0.3s ease-in-out;
-}
-
-.btn-whatsapp:hover {
-  transform: scale(1.1); /* Aumenta o botão em 10% ao passar o mouse */
-  background-color: #ff7f32; /* Muda a cor para um tom laranja mais forte */
-}
-
-.calculadora {
-  background-color: #f4f4f4;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 20px;
-}
-
-.calculadora input {
-  padding: 10px;
-  margin: 10px 0;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.calculadora button {
-  background-color: #ff7f32;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
